@@ -72,14 +72,22 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "BASRA — Modern Luxury Fragrance House" },
+      {
+        name: "description",
+        content:
+          "BASRA is a modern luxury fragrance house. Crafted from global artistry, our niche perfumes tell stories beyond borders.",
+      },
+      { name: "author", content: "BASRA Parfums" },
+      { property: "og:title", content: "BASRA — Modern Luxury Fragrance House" },
+      {
+        property: "og:description",
+        content:
+          "Crafted from global artistry — discover BASRA's signature collection of niche luxury fragrances.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "BASRA — Modern Luxury Fragrance House" },
     ],
     links: [
       {
