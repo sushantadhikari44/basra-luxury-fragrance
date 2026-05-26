@@ -24,7 +24,9 @@ export function Header({
     <header
       className={cn(
         "fixed top-0 inset-x-0 z-40 transition-all duration-500",
-        scrolled ? "glass border-b border-white/10" : "bg-transparent",
+        scrolled
+          ? "backdrop-blur-md bg-white/[0.02] border-b border-white/5"
+          : "bg-transparent",
       )}
     >
       <div className="mx-auto max-w-[1600px] grid grid-cols-3 items-center px-6 md:px-10 h-16 md:h-20">

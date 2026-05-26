@@ -9,6 +9,9 @@ export type Fragrance = {
   description: string;
   story: string;
   notes: string[];
+  topNotes: string[];
+  heartNotes: string[];
+  baseNotes: string[];
   image: string;
   accent: string; // hex
   background: string; // css gradient
@@ -25,10 +28,13 @@ export const FRAGRANCES: Fragrance[] = [
     story:
       "Crafted around radiant bergamot, black tea and cedarwood — a fragrance of weightless sophistication.",
     notes: ["Calabrian Bergamot", "Black Tea", "Cedarwood"],
+    topNotes: ["Calabrian Bergamot", "Juniper", "Pink Pepper"],
+    heartNotes: ["Black Tea", "Iris", "Jasmine Petals"],
+    baseNotes: ["Cedarwood", "White Musk", "Amber"],
     image: imagination,
     accent: "#9ec9d6",
     background:
-      "radial-gradient(120% 80% at 70% 30%, #2a4a5e 0%, #16242f 40%, #0a1218 75%, #06090d 100%)",
+      "radial-gradient(80% 60% at 50% 35%, #3a6a82 0%, #1a3142 35%, #0a151c 70%, #04080b 100%)",
     ambient: "rgba(158, 201, 214, 0.55)",
   },
   {
@@ -40,10 +46,13 @@ export const FRAGRANCES: Fragrance[] = [
     story:
       "Built on rare oud, smoked benzoin and dark amber for a deeply sensual signature.",
     notes: ["Oud", "Raspberry", "Amber"],
+    topNotes: ["Raspberry", "Bergamot", "Saffron"],
+    heartNotes: ["Rose Absolute", "Oud", "Geranium"],
+    baseNotes: ["Smoked Benzoin", "Dark Amber", "Patchouli"],
     image: ombre,
     accent: "#c9923a",
     background:
-      "radial-gradient(120% 80% at 70% 30%, #6a3416 0%, #3a1a0a 40%, #1a0c06 75%, #0a0503 100%)",
+      "radial-gradient(80% 60% at 50% 35%, #7a3a18 0%, #3e1b0a 35%, #170a05 70%, #070302 100%)",
     ambient: "rgba(201, 146, 58, 0.55)",
   },
   {
@@ -55,10 +64,13 @@ export const FRAGRANCES: Fragrance[] = [
     story:
       "An invigorating, minimalist composition with cool aromatic notes and a silken musk base.",
     notes: ["Mint", "Eucalyptus", "Lemon"],
+    topNotes: ["Sicilian Lemon", "Mint", "Eucalyptus"],
+    heartNotes: ["Marine Accord", "Sea Salt", "Violet Leaf"],
+    baseNotes: ["Cedarwood", "White Musk", "Driftwood"],
     image: pacific,
     accent: "#5fd2c7",
     background:
-      "radial-gradient(120% 80% at 70% 30%, #134a4a 0%, #0a2b2f 40%, #061518 75%, #03090b 100%)",
+      "radial-gradient(80% 60% at 50% 35%, #186666 0%, #0a3034 35%, #061518 70%, #03090b 100%)",
     ambient: "rgba(95, 210, 199, 0.55)",
   },
 ];
