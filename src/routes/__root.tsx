@@ -88,6 +88,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:title", content: "BASRA — Modern Luxury Fragrance House" },
+      { name: "description", content: "BASRA is a luxury fragrance website showcasing a curated collection of artisanal perfumes." },
+      { property: "og:description", content: "BASRA is a luxury fragrance website showcasing a curated collection of artisanal perfumes." },
+      { name: "twitter:description", content: "BASRA is a luxury fragrance website showcasing a curated collection of artisanal perfumes." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/48a074df-2e1e-4b93-a06d-4c284a781f9b/id-preview-47eb44e0--3dfce38f-84a3-4924-b496-0dd25b969345.lovable.app-1779727010678.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/48a074df-2e1e-4b93-a06d-4c284a781f9b/id-preview-47eb44e0--3dfce38f-84a3-4924-b496-0dd25b969345.lovable.app-1779727010678.png" },
     ],
     links: [
       {
