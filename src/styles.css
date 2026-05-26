@@ -107,7 +107,7 @@
   to { transform: rotateY(360deg); }
 }
 .bottle-spin {
-  animation: basra-spin 28s linear infinite;
+  animation: basra-spin 16s linear infinite;
   transform-style: preserve-3d;
   will-change: transform;
   backface-visibility: visible;
