@@ -255,8 +255,9 @@ export function Footer() {
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-10">
           <div className="col-span-2">
-            <p className="font-serif text-3xl">
-              B<span className="text-gold italic">asra</span>
+            <p className="text-3xl leading-none">
+              <span className="font-radley text-gold">B</span>
+              <span className="font-cmu">asra</span>
             </p>
             <p className="mt-4 text-sm text-muted-foreground max-w-xs leading-relaxed">
               A modern luxury fragrance house. Crafted from global artistry, designed for those
