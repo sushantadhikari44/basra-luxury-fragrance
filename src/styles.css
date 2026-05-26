@@ -107,7 +107,7 @@
   to { transform: rotateY(360deg); }
 }
 .bottle-spin {
-  animation: basra-spin 16s linear infinite;
+  animation: basra-spin 12s linear infinite;
   transform-style: preserve-3d;
   will-change: transform;
   backface-visibility: visible;
@@ -144,6 +144,55 @@
   50% { opacity: 0.85; transform: scale(1.05); }
 }
 .glow-pulse { animation: glow-pulse 6s ease-in-out infinite; }
+
+/* Luxury gold button with soft glow */
+.btn-gold {
+  background: linear-gradient(135deg, #e6c789 0%, #d4af7a 45%, #b8924f 100%);
+  color: #0a0705;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.35) inset,
+    0 -1px 0 rgba(0,0,0,0.2) inset,
+    0 10px 30px -10px rgba(212, 175, 122, 0.45);
+  transition: box-shadow .5s ease, transform .5s ease, filter .5s ease;
+}
+.btn-gold:hover {
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.45) inset,
+    0 -1px 0 rgba(0,0,0,0.2) inset,
+    0 18px 50px -12px rgba(232, 199, 137, 0.75),
+    0 0 32px rgba(232, 199, 137, 0.35);
+  filter: brightness(1.05);
+}
+
+.btn-ghost-luxury {
+  position: relative;
+  border: 1px solid rgba(255,255,255,0.22);
+  background: transparent;
+  overflow: hidden;
+  transition: color .5s ease, border-color .5s ease;
+}
+.btn-ghost-luxury::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(120deg, transparent 30%, rgba(232,199,137,0.18) 50%, transparent 70%);
+  transform: translateX(-110%);
+  transition: transform .9s ease;
+}
+.btn-ghost-luxury:hover { border-color: #d4af7a; color: #e6c789; }
+.btn-ghost-luxury:hover::before { transform: translateX(110%); }
+
+/* Mist / atmospheric overlays */
+.mist-overlay {
+  background:
+    radial-gradient(60% 40% at 50% 95%, rgba(0,0,0,0.55), transparent 70%),
+    radial-gradient(80% 50% at 50% 0%, rgba(0,0,0,0.4), transparent 70%);
+}
+
+@keyframes basra-mist {
+  0%,100% { transform: translate3d(-2%, 0, 0) scale(1.05); opacity: 0.55; }
+  50% { transform: translate3d(2%, -1%, 0) scale(1.1); opacity: 0.75; }
+}
+.mist-layer { animation: basra-mist 18s ease-in-out infinite; }
 
 @media (prefers-reduced-motion: reduce) {
   .bottle-spin, .float-y, .particle, .glow-pulse { animation: none !important; }
