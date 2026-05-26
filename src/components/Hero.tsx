@@ -9,8 +9,9 @@ export function Hero() {
   const [index, setIndex] = useState(0);
   const { has, toggle } = useFavorites();
 
+  // Bottle spin = 16s for full rotation, swap fragrance at every half-rotation (8s)
   useEffect(() => {
-    const id = setInterval(() => setIndex((i) => (i + 1) % FRAGRANCES.length), 10000);
+    const id = setInterval(() => setIndex((i) => (i + 1) % FRAGRANCES.length), 8000);
     return () => clearInterval(id);
   }, []);
 

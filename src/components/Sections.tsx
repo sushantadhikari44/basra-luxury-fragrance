@@ -72,34 +72,13 @@ export function Collection() {
 export function About() {
   return (
     <section id="about" className="relative py-24 md:py-32 grain border-t border-white/5">
-      <div className="mx-auto max-w-[1400px] px-6 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <div className="relative aspect-[4/5] overflow-hidden">
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "radial-gradient(80% 60% at 50% 40%, #2a1810 0%, #120a06 60%, #06030a 100%)",
-            }}
-          />
-          <img
-            src={FRAGRANCES[1].image}
-            alt="BASRA craft"
-            loading="lazy"
-            className="relative h-full w-full object-contain p-12 float-y drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)]"
-          />
-          <div
-            className="absolute inset-0"
-            style={{
-              background: "radial-gradient(40% 30% at 50% 50%, rgba(212,175,122,0.18), transparent 70%)",
-            }}
-          />
-        </div>
+      <div className="mx-auto max-w-3xl px-6 md:px-10 text-center">
         <div>
           <p className="text-[11px] uppercase tracking-[0.35em] text-gold">About BASRA</p>
           <h2 className="mt-4 font-serif text-4xl md:text-5xl leading-[1.05]">
             A modern house, devoted to the slow art of perfumery.
           </h2>
-          <div className="mt-8 space-y-5 text-muted-foreground leading-relaxed">
+          <div className="mt-8 space-y-5 text-muted-foreground leading-relaxed text-left md:text-center">
             <p>
               BASRA was founded on a simple idea: the most beautiful fragrances are conversations
               between places. Between an oud harvested at dusk in the East and a Calabrian
@@ -111,13 +90,13 @@ export function About() {
               intimate, intentional, and unmistakably international.
             </p>
           </div>
-          <div className="mt-10 grid grid-cols-3 gap-6">
+          <div className="mt-12 grid grid-cols-3 gap-6 max-w-xl mx-auto">
             {[
               { k: "12", v: "Master Perfumers" },
               { k: "38", v: "Sourcing Origins" },
               { k: "2014", v: "Founded" },
             ].map((s) => (
-              <div key={s.v} className="border-l border-gold/40 pl-4">
+              <div key={s.v} className="border-l border-gold/40 pl-4 text-left">
                 <p className="font-serif text-3xl text-gold">{s.k}</p>
                 <p className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground mt-1">
                   {s.v}
@@ -276,8 +255,9 @@ export function Footer() {
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-10">
           <div className="col-span-2">
-            <p className="font-serif text-3xl">
-              B<span className="text-gold italic">asra</span>
+            <p className="text-3xl leading-none">
+              <span className="font-radley text-gold">B</span>
+              <span className="font-cmu">asra</span>
             </p>
             <p className="mt-4 text-sm text-muted-foreground max-w-xs leading-relaxed">
               A modern luxury fragrance house. Crafted from global artistry, designed for those

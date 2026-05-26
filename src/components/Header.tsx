@@ -27,12 +27,26 @@ export function Header({
         scrolled ? "glass border-b border-white/10" : "bg-transparent",
       )}
     >
-      <div className="mx-auto max-w-[1600px] flex items-center justify-between px-6 md:px-10 h-16 md:h-20">
-        <a href="#" className="font-serif text-2xl md:text-3xl tracking-wide select-none">
-          B<span className="text-gold italic">asra</span>
+      <div className="mx-auto max-w-[1600px] grid grid-cols-3 items-center px-6 md:px-10 h-16 md:h-20">
+        <div className="justify-self-start">
+          <button
+            onClick={onOpenMenu}
+            aria-label="Open menu"
+            className="inline-flex items-center justify-center size-10 rounded-full hover:bg-white/5 transition"
+          >
+            <MoreVertical className="size-5" />
+          </button>
+        </div>
+
+        <a
+          href="#"
+          className="justify-self-center text-2xl md:text-3xl tracking-wide select-none leading-none"
+        >
+          <span className="font-radley text-gold">B</span>
+          <span className="font-cmu">asra</span>
         </a>
 
-        <div className="flex items-center gap-2 md:gap-4">
+        <div className="justify-self-end">
           <button
             onClick={onOpenFavorites}
             aria-label={`Open favorites (${count})`}
@@ -44,14 +58,6 @@ export function Header({
                 {count}
               </span>
             )}
-          </button>
-
-          <button
-            onClick={onOpenMenu}
-            aria-label="Open menu"
-            className="inline-flex items-center justify-center size-10 rounded-full hover:bg-white/5 transition"
-          >
-            <MoreVertical className="size-5" />
           </button>
         </div>
       </div>
